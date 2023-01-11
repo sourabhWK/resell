@@ -1,0 +1,32 @@
+<p style="color: green"><%= notice %></p>
+
+
+<%= link_to new_product_path do %>
+  <p class="btn btn-primary">New product</p>
+<% end %>
+<br>
+
+<h1>Products</h1>
+
+
+<div class="container">
+
+  <div class="row row-cols-4">
+
+  <% @products.each do |product| %>
+    <div class="col">
+      <div class="card text-center" style="width: 18rem;">
+          <img class="card-img-top img-fluid md-6 lg-4" src="<%= (url_for(product.image)) %>"   alt="Card image cap">
+          <div class="card-body">
+            <%= link_to product do %>
+              <p class="btn btn-primary"><%= product.Name %></p>
+            <% end %>
+          </div>
+        </div> 
+    </div>
+  <% end %>
+
+  </div>
+
+</div>
+

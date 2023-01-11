@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @product %>
+
+<div>
+  <%= link_to edit_product_path(@product) do %>
+    <p class="btn btn-primary">Edit this product</p>
+  <% end %>
+
+  <%= link_to products_path do %>
+    <p class="btn btn-primary">Back to products</p>
+  <% end %>
+
+  <%= button_to "Destroy this product", @product, method: :delete %>
+</div>

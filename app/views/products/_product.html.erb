@@ -1,0 +1,23 @@
+<div id="<%= dom_id product %>">
+
+  <div class="card" style="width: 18rem;">
+    <img src="<%= (url_for(@product.image)) %>" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"><%= product.Name %></h5>
+      <p class="card-text"><%= product.Description %></p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item"><%= product.Price %></li>
+      <%
+=begin%>
+ <li class="list-group-item"><%= product.Category %></li> 
+<%
+=end%>
+      <li class="list-group-item"><p>
+    <strong>Purchased on : </strong>
+    <%= product.Purchase_date %>
+  </p></li>
+    </ul>
+  </div>
+
+  </div>
